@@ -1,0 +1,33 @@
+.square,
+.square-active {
+  display: flex;
+  height: 0.625rem;
+  width: 0.625rem;
+  padding: 0;
+  background-color: #26335E;
+  border-style: none;
+
+}
+
+.square-active {
+  background-color: #F0FFFE;
+}
+
+.square__border,
+.square__inner-two {
+  height: 0.01rem;
+  width: 0.875rem;
+  background-color: black;
+  position: absolute;
+  margin: 0.625rem 0rem 0rem -0.175rem;
+  z-index: 1;
+}
+
+.square__inner-two {
+  height: 0.875rem;
+  width: 0.01rem;
+  background-color: black;
+  position: absolute;
+  margin: 0rem 0rem 0rem 0rem;
+  z-index: 1;
+}

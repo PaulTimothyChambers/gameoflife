@@ -1,0 +1,10 @@
+.game-board {
+  width: 62.5rem;
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: row;
+  margin-left: 23rem;
+  flex-wrap: wrap;
+  border-style: solid;
+  border-width: .625rem;
+}

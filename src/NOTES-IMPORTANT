@@ -1,0 +1,4 @@
+Where we are stuck:
+  - trying to pass gameBoard to GridSquare,
+    but cannot do so at first render since
+    gameBoard is still empty at that time
