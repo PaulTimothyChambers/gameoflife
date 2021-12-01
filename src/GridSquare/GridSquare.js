@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 
+// isActive: false,
 class GridSquare extends Component {
   state = {
-    isActive: false,
     squareValue: 0
   }
     // this.getALife = this.getALife.bind(this);
@@ -10,6 +10,11 @@ class GridSquare extends Component {
 
   // componentDidMount() {
   //   this.setState({ isActive: this.props.isActive })
+  // }
+  // isActive = useRef(false)
+  //
+  // useEffect = () => {
+  //   setIsActive(prevActive => prevActive = !isActive)
   // }
 
   getALife = (event) => {
@@ -20,12 +25,14 @@ class GridSquare extends Component {
       this.changeState(event)
     }
 
-    if (!this.state.isActive) {
+    if (this.state.isActive) {
       this.state.isActive = !this.state.isActive
+      // this.useEffect()
       this.state.squareValue++
       this.props.updateGameBoard(this)
     } else {
       this.state.isActive = !this.state.isActive
+    //   this.useEffect()
       this.state.squareValue--
       this.props.updateGameBoard(this)
     }

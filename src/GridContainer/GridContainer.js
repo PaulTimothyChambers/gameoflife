@@ -32,6 +32,12 @@ class GridContainer extends Component {
     this.loadGameInitializeBoard(emptyBoard)
   }
 
+  // isActive = useRef(false)
+  //
+  // useEffect(() => {
+  //   setIsActive(prevActive => prevActive = !isActive)
+  // })
+
   findActives = (event) => {
     console.log(this.state.activeSquares)
     // const actives = gameBoard.filter(square => {
@@ -154,7 +160,7 @@ class GridContainer extends Component {
   }
 
   updateGameBoard = (square) => {
-    if (square.state.isActive) {
+    if (square.ref) {
       this.state.activeSquares.push(square)
     } else {
       this.state.activeSquares.splice(this.state.activeSquares.indexOf(square), 1)
